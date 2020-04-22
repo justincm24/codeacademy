@@ -1,0 +1,42 @@
+-- This is the first query:
+
+SELECT DISTINCT year from population_years;
+
+-- Add your additional queries below:
+
+-- Question 3 ANSWER 11 years (2000-2010)
+
+-- Question 4 Below
+
+SELECT *
+FROM population_years
+WHERE country = 'Gabon'
+ORDER BY population DESC;
+
+-- Question 4 ANSWER 1.5426 million
+
+-- Question 5 Below
+
+SELECT * FROM population_years
+WHERE year = 2005
+ORDER BY population ASC
+LIMIT 10;
+
+-- Question 6 Below
+
+SELECT DISTINCT country
+FROM population_years
+WHERE year = 2010 AND population >= 100;
+
+-- Question 7 Below
+
+SELECT DISTINCT country FROM population_years
+WHERE country LIKE '%Islands%';
+
+-- Question 8 Below
+
+SELECT * FROM population_years
+  WHERE country = 'Indonesia'
+  AND year = 2000
+  OR country = 'Indonesia'
+  AND year = 2010;
